@@ -5,6 +5,33 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Travel View Controller-->
+        <scene sceneID="sAX-Qd-Xus">
+            <objects>
+                <viewController id="gZx-3f-owU" customClass="TravelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8d-hQ-Qn6"/>
+                        <viewControllerLayoutGuide type="bottom" id="h3h-bf-Gmh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NeS-6d-VGa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-YJ-6tV">
+                                <rect key="frame" x="290" y="369" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTravel" id="1G9-eO-wi0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61629775809999998" green="0.28126582179999998" blue="0.91621291039999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgg-jC-9t4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="-332"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,9 +44,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-hN-y1n">
+                                <rect key="frame" x="278" y="275" width="46" height="30"/>
+                                <state key="normal" title="Travel"/>
+                                <connections>
+                                    <segue destination="gZx-3f-owU" kind="show" identifier="toTravelViewController" id="Ybr-xj-AmJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-Tt-sUX">
+                                <rect key="frame" x="270" y="334" width="60" height="30"/>
+                                <state key="normal">
+                                    <string key="title" base64-UTF8="YES">
+H1BlcnNvbmFsA
+</string>
+                                </state>
+                                <connections>
+                                    <segue destination="uKf-iR-bkb" kind="show" identifier="toPersonalViewController" id="DAb-UX-RHq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6b-iCC">
+                                <rect key="frame" x="270" y="407" width="60" height="30"/>
+                                <state key="normal" title="Time Off"/>
+                                <connections>
+                                    <segue destination="tAP-T2-hUr" kind="show" identifier="toTimeViewFromViewController" id="oSx-zV-lAB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Zv-Tun">
-                                <rect key="frame" x="238" y="248" width="183" height="30"/>
-                                <state key="normal" title="Click to change the screen"/>
+                                <rect key="frame" x="209" y="219" width="183" height="30"/>
+                                <state key="normal" title="Gym"/>
                                 <connections>
                                     <action selector="changeScreenToUpdated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8P-aP-E0D"/>
                                     <action selector="changeScreens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkM-eX-4JO"/>
@@ -34,6 +86,60 @@
             </objects>
             <point key="canvasLocation" x="827" y="370"/>
         </scene>
+        <!--Time View Controller-->
+        <scene sceneID="8gR-NC-7zS">
+            <objects>
+                <viewController id="tAP-T2-hUr" customClass="TimeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CBj-4F-3iS"/>
+                        <viewControllerLayoutGuide type="bottom" id="o2g-tk-fTZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9T-ec-91U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-RF-NTi">
+                                <rect key="frame" x="330" y="190" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTime" id="6Kz-De-dyP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJB-wv-6Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="819" y="1022"/>
+        </scene>
+        <!--Personal View Controller-->
+        <scene sceneID="Qnj-1z-YAy">
+            <objects>
+                <viewController id="uKf-iR-bkb" customClass="PersonalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TTG-ak-ISb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gek-lS-uIC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EnV-Pq-YsK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clj-Uy-gMH">
+                                <rect key="frame" x="262" y="256" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromPersonal" id="MG4-fv-WPI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxV-lP-Eaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="-297"/>
+        </scene>
         <!--Updated View Controller-->
         <scene sceneID="nDW-zL-hj3">
             <objects>
@@ -45,12 +151,50 @@
                     <view key="view" contentMode="scaleToFill" id="Ka7-Fu-zE7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHV-sY-bMW">
+                                <rect key="frame" x="180" y="330" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromGym" id="qVf-II-jbI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gymimage" translatesAutoresizingMaskIntoConstraints="NO" id="onj-xq-ZES">
+                                <rect key="frame" x="180" y="61" width="240" height="133"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.21012020679999999" green="0.65066085149999997" blue="0.70245422980000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomImage" destination="onj-xq-ZES" id="Q5f-s9-O1R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImH-9H-uNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1471" y="370"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DyF-Wh-byA">
+            <objects>
+                <viewController id="kfc-br-FAv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bVL-M1-So7"/>
+                        <viewControllerLayoutGuide type="bottom" id="jeJ-yr-acn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sHm-zu-bep">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GgO-Ya-QhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
+    <resources>
+        <image name="gymimage" width="275" height="183"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Kz-De-dyP"/>
+    </inferredMetricsTieBreakers>
 </document>
