@@ -19,7 +19,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func changeScreens(sender: UIButton)
+    {
+        performSegueWithIdentifier("toUpdatedView", sender: sender)
+    }
 
+    @IBAction func changeScreenToUpdated(sender: UIButton)
+    {
+        performSegueWithIdentifier("toUpdatedView", sender : sender)
+    }
 
 }
 
