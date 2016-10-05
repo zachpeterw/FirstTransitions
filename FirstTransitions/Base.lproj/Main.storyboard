@@ -138,6 +138,9 @@ H1BlcnNvbmFsA
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="TimeOffImage" destination="ppB-Zd-FhL" id="wo8-1O-mAl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJB-wv-6Jp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,6 +178,9 @@ H1BlcnNvbmFsA
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="PersonalImage" destination="6gd-ac-4Rc" id="w76-To-DxC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxV-lP-Eaz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,6 +235,6 @@ H1BlcnNvbmFsA
         <image name="timeoffImage" width="468" height="335"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qVf-II-jbI"/>
+        <segue reference="6Kz-De-dyP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,7 +19,7 @@ class UpdatedViewController : UIViewController
         super.viewDidLoad()
         //Then load this classes components.
         
-        bottomImage.image = UIImage(named: "gymImage")
+        bottomImage.image = UIImage(named: "gymimage")
     }
     
 }
