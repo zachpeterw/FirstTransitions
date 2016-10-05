@@ -18,12 +18,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-YJ-6tV">
-                                <rect key="frame" x="290" y="369" width="46" height="30"/>
+                                <rect key="frame" x="290" y="240" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTravel" id="1G9-eO-wi0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-pD-85x">
+                                <rect key="frame" x="193" y="71" width="240" height="128"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvU-p1-wPN">
+                                <rect key="frame" x="193" y="305" width="240" height="206"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I’m very adventurous and I love to travel. Recently I traveled to Thailand and Denmark. My friends and I wanted to go on a trip during the summer and decided we would attend a large music festival in Zealand, Denmark. We saw some incredible places and had a wonderful time. It was a pleasure to see culture from a foreign perspective.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.61629775809999998" green="0.28126582179999998" blue="0.91621291039999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -45,14 +55,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-hN-y1n">
-                                <rect key="frame" x="278" y="275" width="46" height="30"/>
+                                <rect key="frame" x="235" y="28" width="46" height="30"/>
                                 <state key="normal" title="Travel"/>
                                 <connections>
                                     <segue destination="gZx-3f-owU" kind="show" identifier="toTravelViewController" id="Ybr-xj-AmJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6b-iCC">
+                                <rect key="frame" x="311" y="28" width="60" height="30"/>
+                                <state key="normal" title="Time Off"/>
+                                <connections>
+                                    <segue destination="tAP-T2-hUr" kind="show" identifier="toTimeViewFromViewController" id="oSx-zV-lAB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Zv-Tun">
+                                <rect key="frame" x="61" y="28" width="183" height="30"/>
+                                <state key="normal" title="Gym"/>
+                                <connections>
+                                    <action selector="changeScreenToUpdated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8P-aP-E0D"/>
+                                    <action selector="changeScreens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkM-eX-4JO"/>
+                                    <segue destination="COK-5e-aKV" kind="show" identifier="toUpdatedView" id="WhV-cL-Anp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-PA-EU9">
+                                <rect key="frame" x="30" y="84" width="251" height="144"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Hi! My name is Zach Whitehead. This app is to tell you a little bit more about me. I’m a senior attending Alta High school. For your convenience I have four topics which you can view to learn more about that part of my life.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZaU-2V-9vN">
+                                <rect key="frame" x="20" y="327" width="240" height="128"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-Tt-sUX">
-                                <rect key="frame" x="270" y="334" width="60" height="30"/>
+                                <rect key="frame" x="30" y="28" width="60" height="30"/>
                                 <state key="normal">
                                     <string key="title" base64-UTF8="YES">
 H1BlcnNvbmFsA
@@ -60,22 +96,6 @@ H1BlcnNvbmFsA
                                 </state>
                                 <connections>
                                     <segue destination="uKf-iR-bkb" kind="show" identifier="toPersonalViewController" id="DAb-UX-RHq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6b-iCC">
-                                <rect key="frame" x="270" y="407" width="60" height="30"/>
-                                <state key="normal" title="Time Off"/>
-                                <connections>
-                                    <segue destination="tAP-T2-hUr" kind="show" identifier="toTimeViewFromViewController" id="oSx-zV-lAB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Zv-Tun">
-                                <rect key="frame" x="209" y="219" width="183" height="30"/>
-                                <state key="normal" title="Gym"/>
-                                <connections>
-                                    <action selector="changeScreenToUpdated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8P-aP-E0D"/>
-                                    <action selector="changeScreens:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkM-eX-4JO"/>
-                                    <segue destination="COK-5e-aKV" kind="show" identifier="toUpdatedView" id="WhV-cL-Anp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,8 +118,18 @@ H1BlcnNvbmFsA
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeoffImage" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-Zd-FhL">
+                                <rect key="frame" x="180" y="55" width="240" height="152"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="moa-bR-0fZ">
+                                <rect key="frame" x="172" y="247" width="256" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I love to be with friends. During my childhood my friends and I loved to play videogames after school. I love to play and share that experience with them. We play games like Destiny and Halo. I recently have become intrigued by the work of CD: Projekt Red including The Witcher 3: The Wild Hunt</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-RF-NTi">
-                                <rect key="frame" x="330" y="190" width="46" height="30"/>
+                                <rect key="frame" x="277" y="502" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTime" id="6Kz-De-dyP"/>
@@ -126,12 +156,22 @@ H1BlcnNvbmFsA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clj-Uy-gMH">
-                                <rect key="frame" x="262" y="256" width="46" height="30"/>
+                                <rect key="frame" x="165" y="262" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromPersonal" id="MG4-fv-WPI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-pR-Eyl">
+                                <rect key="frame" x="93" y="358" width="240" height="175"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I love to try new things and have new adventures. I love to be with friends some of which attend Alta and others at Bingham High School. I’m an avid skier, which makes me feel grateful that I live so close to world class skiing resorts. During the summer I love to hike, bike, and swim. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personalimage" highlightedImage="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-ac-4Rc">
+                                <rect key="frame" x="68" y="53" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -152,16 +192,23 @@ H1BlcnNvbmFsA
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gymimage" translatesAutoresizingMaskIntoConstraints="NO" id="onj-xq-ZES">
+                                <rect key="frame" x="68" y="57" width="240" height="133"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-ao-FTa">
+                                <rect key="frame" x="73" y="290" width="240" height="149"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">My friends and I love to hit the gym as part of our daily ritual. The exercise is invigorating and fun to share with others. I’m starting to dabble in yoga as a part of my routine. I’ve found it to be a relaxing way to stretch and improve mobility. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHV-sY-bMW">
-                                <rect key="frame" x="180" y="330" width="46" height="30"/>
+                                <rect key="frame" x="165" y="225" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromGym" id="qVf-II-jbI"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gymimage" translatesAutoresizingMaskIntoConstraints="NO" id="onj-xq-ZES">
-                                <rect key="frame" x="180" y="61" width="240" height="133"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.21012020679999999" green="0.65066085149999997" blue="0.70245422980000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -173,28 +220,15 @@ H1BlcnNvbmFsA
             </objects>
             <point key="canvasLocation" x="1471" y="370"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DyF-Wh-byA">
-            <objects>
-                <viewController id="kfc-br-FAv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bVL-M1-So7"/>
-                        <viewControllerLayoutGuide type="bottom" id="jeJ-yr-acn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sHm-zu-bep">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GgO-Ya-QhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
+        <image name="RoskildeFestival" width="3504" height="2336"/>
         <image name="gymimage" width="275" height="183"/>
+        <image name="homeImage" width="275" height="183"/>
+        <image name="personalimage" width="275" height="183"/>
+        <image name="timeoffImage" width="468" height="335"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Kz-De-dyP"/>
+        <segue reference="qVf-II-jbI"/>
     </inferredMetricsTieBreakers>
 </document>
