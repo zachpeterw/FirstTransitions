@@ -17,6 +17,7 @@ class TimeViewController : UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         TimeOffImage.image = UIImage(named: "timeoffImage")
     }
     

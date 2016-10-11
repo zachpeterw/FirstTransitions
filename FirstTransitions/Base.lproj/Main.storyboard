@@ -8,7 +8,7 @@
         <!--Travel View Controller-->
         <scene sceneID="sAX-Qd-Xus">
             <objects>
-                <viewController id="gZx-3f-owU" customClass="TravelViewController" sceneMemberID="viewController">
+                <viewController id="gZx-3f-owU" customClass="TravelViewController" customModule="FirstTransitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K8d-hQ-Qn6"/>
                         <viewControllerLayoutGuide type="bottom" id="h3h-bf-Gmh"/>
@@ -24,9 +24,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTravel" id="1G9-eO-wi0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-pD-85x">
-                                <rect key="frame" x="193" y="71" width="240" height="128"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvU-p1-wPN">
                                 <rect key="frame" x="193" y="305" width="240" height="206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,9 +31,15 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-pD-85x">
+                                <rect key="frame" x="82" y="34" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.61629775809999998" green="0.28126582179999998" blue="0.91621291039999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="travelImage" destination="1sy-pD-85x" id="X5D-Yj-mtq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgg-jC-9t4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +112,7 @@ H1BlcnNvbmFsA
         <!--Time View Controller-->
         <scene sceneID="8gR-NC-7zS">
             <objects>
-                <viewController id="tAP-T2-hUr" customClass="TimeViewController" sceneMemberID="viewController">
+                <viewController id="tAP-T2-hUr" customClass="TimeViewController" customModule="FirstTransitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CBj-4F-3iS"/>
                         <viewControllerLayoutGuide type="bottom" id="o2g-tk-fTZ"/>
@@ -149,7 +152,7 @@ H1BlcnNvbmFsA
         <!--Personal View Controller-->
         <scene sceneID="Qnj-1z-YAy">
             <objects>
-                <viewController id="uKf-iR-bkb" customClass="PersonalViewController" sceneMemberID="viewController">
+                <viewController id="uKf-iR-bkb" customClass="PersonalViewController" customModule="FirstTransitions" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TTG-ak-ISb"/>
                         <viewControllerLayoutGuide type="bottom" id="Gek-lS-uIC"/>
@@ -173,7 +176,7 @@ H1BlcnNvbmFsA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personalimage" highlightedImage="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-ac-4Rc">
-                                <rect key="frame" x="68" y="53" width="240" height="128"/>
+                                <rect key="frame" x="20" y="77" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,6 +238,6 @@ H1BlcnNvbmFsA
         <image name="timeoffImage" width="468" height="335"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6Kz-De-dyP"/>
+        <segue reference="1G9-eO-wi0"/>
     </inferredMetricsTieBreakers>
 </document>
