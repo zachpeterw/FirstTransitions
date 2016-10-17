@@ -18,5 +18,6 @@ class TravelViewController : UIViewController
         super.viewDidLoad()
         travelImage.image = UIImage(named: "TravelImage")
     }
+
 }
 
