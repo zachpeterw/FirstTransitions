@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Travel View Controller-->
@@ -17,25 +20,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-YJ-6tV">
-                                <rect key="frame" x="290" y="240" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-YJ-6tV">
+                                <rect key="frame" x="159" y="398" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTravel" id="1G9-eO-wi0"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvU-p1-wPN">
-                                <rect key="frame" x="193" y="305" width="240" height="206"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvU-p1-wPN">
+                                <rect key="frame" x="20" y="218" width="324" height="153"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">I’m very adventurous and I love to travel. Recently I traveled to Thailand and Denmark. My friends and I wanted to go on a trip during the summer and decided we would attend a large music festival in Zealand, Denmark. We saw some incredible places and had a wonderful time. It was a pleasure to see culture from a foreign perspective.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-pD-85x">
-                                <rect key="frame" x="96" y="90" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="1sy-pD-85x">
+                                <rect key="frame" x="20" y="20" width="324" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="dP0-sc-u2T"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.61629775809999998" green="0.28126582179999998" blue="0.91621291039999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="h3h-bf-Gmh" firstAttribute="top" secondItem="qvU-p1-wPN" secondAttribute="bottom" constant="229" id="43i-4A-iy7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qvU-p1-wPN" secondAttribute="leading" id="5bZ-GH-TMI"/>
+                            <constraint firstItem="1sy-pD-85x" firstAttribute="top" secondItem="K8d-hQ-Qn6" secondAttribute="bottom" id="Erk-Yk-Grb"/>
+                            <constraint firstItem="1sy-pD-85x" firstAttribute="trailing" secondItem="qvU-p1-wPN" secondAttribute="trailing" id="QQ8-Xh-SwX"/>
+                            <constraint firstItem="qvU-p1-wPN" firstAttribute="top" secondItem="K8d-hQ-Qn6" secondAttribute="bottom" constant="198" id="TQg-Ka-y8z"/>
+                            <constraint firstItem="qvU-p1-wPN" firstAttribute="top" secondItem="1sy-pD-85x" secondAttribute="bottom" constant="8" symbolic="YES" id="jHu-FG-1A0"/>
+                            <constraint firstItem="j0m-YJ-6tV" firstAttribute="top" secondItem="qvU-p1-wPN" secondAttribute="bottom" constant="27" id="jwC-AV-5wl"/>
+                            <constraint firstItem="1sy-pD-85x" firstAttribute="centerX" secondItem="j0m-YJ-6tV" secondAttribute="centerX" id="mIk-4W-zRT"/>
+                            <constraint firstItem="1sy-pD-85x" firstAttribute="leading" secondItem="qvU-p1-wPN" secondAttribute="leading" id="sxN-dt-d4K"/>
+                            <constraint firstItem="h3h-bf-Gmh" firstAttribute="top" secondItem="j0m-YJ-6tV" secondAttribute="bottom" constant="172" id="udu-US-YMk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="travelImage" destination="1sy-pD-85x" id="X5D-Yj-mtq"/>
@@ -57,22 +75,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-hN-y1n">
-                                <rect key="frame" x="235" y="28" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoL-hN-y1n">
+                                <rect key="frame" x="240" y="515" width="120" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Travel"/>
                                 <connections>
                                     <segue destination="gZx-3f-owU" kind="show" identifier="toTravelViewController" id="Ybr-xj-AmJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6b-iCC">
-                                <rect key="frame" x="311" y="28" width="60" height="30"/>
-                                <state key="normal" title="Time Off"/>
-                                <connections>
-                                    <segue destination="tAP-T2-hUr" kind="show" identifier="toTimeViewFromViewController" id="oSx-zV-lAB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Zv-Tun">
-                                <rect key="frame" x="61" y="28" width="183" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp5-Zv-Tun">
+                                <rect key="frame" x="240" y="395" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="A3Z-LV-0uN"/>
+                                    <constraint firstAttribute="height" constant="50" id="wyj-3R-RIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Gym"/>
                                 <connections>
                                     <action selector="changeScreenToUpdated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8P-aP-E0D"/>
@@ -80,18 +97,19 @@
                                     <segue destination="COK-5e-aKV" kind="show" identifier="toUpdatedView" id="WhV-cL-Anp"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-PA-EU9">
-                                <rect key="frame" x="30" y="84" width="251" height="144"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4aA-PA-EU9">
+                                <rect key="frame" x="20" y="245" width="340" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Hi! My name is Zach Whitehead. This app is to tell you a little bit more about me. I’m a senior attending Alta High school. For your convenience I have four topics which you can view to learn more about that part of my life.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZaU-2V-9vN">
-                                <rect key="frame" x="20" y="327" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="homeImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZaU-2V-9vN">
+                                <rect key="frame" x="20" y="20" width="340" height="209"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-Tt-sUX">
-                                <rect key="frame" x="30" y="28" width="60" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-Tt-sUX">
+                                <rect key="frame" x="20" y="395" width="120" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal">
                                     <string key="title" base64-UTF8="YES">
 H1BlcnNvbmFsA
@@ -101,8 +119,32 @@ H1BlcnNvbmFsA
                                     <segue destination="uKf-iR-bkb" kind="show" identifier="toPersonalViewController" id="DAb-UX-RHq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-6b-iCC">
+                                <rect key="frame" x="20" y="515" width="120" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Time Off"/>
+                                <connections>
+                                    <segue destination="tAP-T2-hUr" kind="show" identifier="toTimeViewFromViewController" id="oSx-zV-lAB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZaU-2V-9vN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0Wj-MO-J6O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LfS-6b-iCC" secondAttribute="bottom" constant="35" id="4c7-Fj-kcW"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="trailing" secondItem="4aA-PA-EU9" secondAttribute="trailing" id="DSs-ls-Ab1"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="baseline" secondItem="hBe-Tt-sUX" secondAttribute="firstBaseline" id="IXU-c7-7gL"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="top" secondItem="hBe-Tt-sUX" secondAttribute="top" id="Jnl-7X-j7s"/>
+                            <constraint firstItem="GoL-hN-y1n" firstAttribute="top" secondItem="Cp5-Zv-Tun" secondAttribute="bottom" constant="70" id="PCT-QQ-Uvd"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="trailing" secondItem="GoL-hN-y1n" secondAttribute="trailing" id="QaJ-Sh-9th"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="leading" secondItem="GoL-hN-y1n" secondAttribute="leading" id="S74-sx-LrM"/>
+                            <constraint firstItem="4aA-PA-EU9" firstAttribute="top" secondItem="ZaU-2V-9vN" secondAttribute="bottom" constant="16" id="Ycj-iN-11A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hBe-Tt-sUX" secondAttribute="bottom" constant="155" id="aQX-5d-zyI"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="trailing" secondItem="ZaU-2V-9vN" secondAttribute="trailing" id="oa1-Ha-yec"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GoL-hN-y1n" secondAttribute="bottom" constant="35" id="stD-6x-DyV"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="top" secondItem="4aA-PA-EU9" secondAttribute="bottom" constant="31" id="tJH-EP-Uhi"/>
+                            <constraint firstItem="Cp5-Zv-Tun" firstAttribute="firstBaseline" secondItem="hBe-Tt-sUX" secondAttribute="baseline" id="uFO-f5-9qY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -122,17 +164,17 @@ H1BlcnNvbmFsA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timeoffImage" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-Zd-FhL">
-                                <rect key="frame" x="180" y="55" width="240" height="152"/>
+                                <rect key="frame" x="20" y="20" width="323" height="214"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="moa-bR-0fZ">
-                                <rect key="frame" x="172" y="247" width="256" height="174"/>
+                                <rect key="frame" x="20" y="247" width="323" height="143"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">I love to be with friends. During my childhood my friends and I loved to play videogames after school. I love to play and share that experience with them. We play games like Destiny and Halo. I recently have become intrigued by the work of CD: Projekt Red including The Witcher 3: The Wild Hunt</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-RF-NTi">
-                                <rect key="frame" x="277" y="502" width="46" height="30"/>
+                                <rect key="frame" x="158" y="422" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromTime" id="6Kz-De-dyP"/>
@@ -161,25 +203,38 @@ H1BlcnNvbmFsA
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clj-Uy-gMH">
-                                <rect key="frame" x="165" y="262" width="46" height="30"/>
-                                <state key="normal" title="Home"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromPersonal" id="MG4-fv-WPI"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-pR-Eyl">
-                                <rect key="frame" x="93" y="358" width="240" height="175"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-pR-Eyl">
+                                <rect key="frame" x="20" y="240" width="328" height="137"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">I love to try new things and have new adventures. I love to be with friends some of which attend Alta and others at Bingham High School. I’m an avid skier, which makes me feel grateful that I live so close to world class skiing resorts. During the summer I love to hike, bike, and swim. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personalimage" highlightedImage="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-ac-4Rc">
-                                <rect key="frame" x="68" y="110" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="personalimage" highlightedImage="RoskildeFestival" translatesAutoresizingMaskIntoConstraints="NO" id="6gd-ac-4Rc">
+                                <rect key="frame" x="20" y="20" width="328" height="212"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clj-Uy-gMH">
+                                <rect key="frame" x="161" y="392" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromPersonal" id="MG4-fv-WPI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2CY-pR-Eyl" firstAttribute="top" secondItem="TTG-ak-ISb" secondAttribute="bottom" constant="220" id="4Im-Pj-Ipw"/>
+                            <constraint firstItem="Clj-Uy-gMH" firstAttribute="top" secondItem="2CY-pR-Eyl" secondAttribute="bottom" constant="15" id="58Q-vX-EQj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2CY-pR-Eyl" secondAttribute="leading" id="9yN-Pp-VjC"/>
+                            <constraint firstItem="Clj-Uy-gMH" firstAttribute="top" secondItem="TTG-ak-ISb" secondAttribute="bottom" constant="372" id="ILJ-OE-8sN"/>
+                            <constraint firstItem="Gek-lS-uIC" firstAttribute="top" secondItem="Clj-Uy-gMH" secondAttribute="bottom" constant="178" id="PAR-EW-4jd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2CY-pR-Eyl" secondAttribute="trailing" constant="232" id="cPY-8Y-E5m"/>
+                            <constraint firstItem="Gek-lS-uIC" firstAttribute="top" secondItem="6gd-ac-4Rc" secondAttribute="bottom" constant="368" id="f9a-WV-cJH"/>
+                            <constraint firstItem="Gek-lS-uIC" firstAttribute="top" secondItem="2CY-pR-Eyl" secondAttribute="bottom" constant="223" id="fNK-Mm-6yq"/>
+                            <constraint firstItem="6gd-ac-4Rc" firstAttribute="top" secondItem="TTG-ak-ISb" secondAttribute="bottom" id="fPM-yJ-Vm4"/>
+                            <constraint firstItem="Clj-Uy-gMH" firstAttribute="top" secondItem="2CY-pR-Eyl" secondAttribute="bottom" constant="15" id="jMb-WR-86K"/>
+                            <constraint firstItem="2CY-pR-Eyl" firstAttribute="top" secondItem="6gd-ac-4Rc" secondAttribute="bottom" constant="8" id="sHN-dv-khu"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="PersonalImage" destination="6gd-ac-4Rc" id="w76-To-DxC"/>
@@ -202,17 +257,17 @@ H1BlcnNvbmFsA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gymimage" translatesAutoresizingMaskIntoConstraints="NO" id="onj-xq-ZES">
-                                <rect key="frame" x="68" y="57" width="240" height="133"/>
+                                <rect key="frame" x="20" y="20" width="333" height="198"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nz7-ao-FTa">
-                                <rect key="frame" x="73" y="290" width="240" height="149"/>
+                                <rect key="frame" x="20" y="234" width="333" height="114"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">My friends and I love to hit the gym as part of our daily ritual. The exercise is invigorating and fun to share with others. I’m starting to dabble in yoga as a part of my routine. I’ve found it to be a relaxing way to stretch and improve mobility. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHV-sY-bMW">
-                                <rect key="frame" x="165" y="225" width="46" height="30"/>
+                                <rect key="frame" x="163" y="401" width="46" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toViewControllerFromGym" id="qVf-II-jbI"/>
@@ -238,6 +293,6 @@ H1BlcnNvbmFsA
         <image name="timeoffImage" width="468" height="335"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MG4-fv-WPI"/>
+        <segue reference="6Kz-De-dyP"/>
     </inferredMetricsTieBreakers>
 </document>
